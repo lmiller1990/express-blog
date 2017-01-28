@@ -35,5 +35,22 @@ describe("User", () => {
       done()
     })
   })
-  
+
+  it("compares a guess and password and responds with the corrert result", (done) => {
+    let password = "the_password"
+    let incorrectGuess = "wrong_password"
+
+    this.models.User.create({
+      username: "tester",
+      password: password
+    }).then((user) => {
+      user.checkPassword(incorrectGuess).then((result) => {
+        expect(result).to.equal(false)
+      })
+      user.checkPassword(password).then((result) => {
+        expect(result).to.equal(true)
+        done()
+      })
+    })
+  })  
 })

@@ -26,6 +26,14 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     instanceMethods: {
+      checkPassword (guess) {
+        return new Promise((resolve, reject) => {
+          bcrypt.compare(guess, this.password, (err, res) => {
+            if (err) { reject(res) } 
+            resolve(res)
+          })
+        })
+      },
       sayHi () {
         return this.username
       }

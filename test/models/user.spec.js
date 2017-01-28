@@ -28,11 +28,12 @@ describe("User", () => {
 
   it("hashes the password before persisting the user", (done) => {
     this.models.User.create({
-      username: "testUser",
-      password: "nonHashedPassword"
+      username: "test_user",
+      password: "non_hashed_password"
     }).then((user) => {
-      expect(user.password).to.equal("nonHashedPassword")
+      expect(user.password).not.to.equal("non_hashed_password")
       done()
     })
   })
+  
 })

@@ -1,5 +1,18 @@
 {
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha 'test/**/*.spec.js'"
+  },
   "dependencies": {
-    "express": "^4.14.0"
+    "bcrypt-nodejs": "0.0.3",
+    "express": "^4.14.0",
+    "mysql": "^2.13.0",
+    "mysql2": "^1.1.2",
+    "sequelize": "^3.30.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.4.7",
+    "chai": "^3.5.0",
+    "cross-env": "^3.1.4",
+    "mocha": "^3.2.0"
   }
 }

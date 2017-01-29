@@ -1,46 +1,38 @@
-const express = require("express")
-const bodyParser = require("body-parser")
-const session       = require("express-session")
-const flash         = require("connect-flash")
-const passport      = require("passport")
-const cookieParser  = require("cookie-parser")
-const index   = require(__dirname + "/routes/index.js")
-const users   = require(__dirname + "/routes/users.js")
-const path          = require("path")
-const setupPassport = require(__dirname + "/config/passportConfig.js")
-const router = express.Router()
+var bodyParser = require("body-parser");
+var cookieParser = require("cookie-parser");
+var express = require("express");
+var flash = require("connect-flash");
+var passport = require("passport");
+var path = require("path");
+var session = require("express-session");
 
-const app = express()
-setupPassport()
+var setUpPassport = require("./config/passportConfig.js");
+var routes = require("./routes.js");
 
-app.set("views", path.join(__dirname, "views"))
-app.set("view engine", "ejs")
+var app = express();
+setUpPassport();
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true  }))
+app.set("port", process.env.PORT || 3000);
 
-app.use(cookieParser())
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+app.use(bodyParser.urlencoded({ extended: false  }));
+app.use(cookieParser());
+
 app.use(session({
-  secret: "TKRv0IJs=HYqrvagQ#&!F!%V]Ww/4KiVs$s,<<MX",
-  resave: true,
-  saveUninitialized: true
-}))
+    secret: "LUp$Dg?,I#i&owP3=9su+OB%`JgL4muLF5YJ~{;t",
+    resave: true,
+    saveUninitialized: true
+}));
 
-app.use(flash())
+app.use(flash());
 
-app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.initialize());
+app.use(passport.session());
 
+app.use(routes);
 
-app.use(index)
-app.use(users)
-
-app.use((req, res) => {
-  res.status(404).send("404 error. Page not found") 
-})
-
-app.listen(3000, () => {
-  console.log("App started on port 3000.")
-})
-
-module.exports = app
+app.listen(app.get("port"), function() {
+    console.log("Server started on port " + app.get("port"));
+});

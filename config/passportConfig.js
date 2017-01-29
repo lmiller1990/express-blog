@@ -13,7 +13,9 @@ module.exports = () => {
       where: {
         id: id
       }
-    }).then((user) => { done(null, user) })
+    }).then((user) => { 
+      console.log(user, 'was deserialized')
+      done(null, user) })
   })
 
   passport.use("login", new LocalStrategy((username, password, done) => {

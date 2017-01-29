@@ -1,0 +1,12 @@
+<% include ../_header %>
+
+<h3>Create New Post</h3>
+
+<form action="/posts/create" method="post">
+  <input type="text" name="title" placeholder="Post title" required>
+  <textarea type="text" name="body" placeholder="Post body" required></textarea>
+  <input type="submit" value="Create Post">
+<form>
+
+<% include ../_footer %>
+

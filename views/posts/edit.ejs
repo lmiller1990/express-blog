@@ -1,0 +1,12 @@
+<% include ../_header %>
+
+<%= post.id + ' ' + post.title %>
+<form action="/posts/update" method="post">
+  <input type="text" name="title" value="<%= post.title %>" required>
+  <input type="text" name="body" value="<%= post.body %>" required>
+  <input type="hidden" name="id" value="<%= post.id %>">
+  <input type="submit" value="Update Post">
+</form>
+
+<% include ../_footer %>
+

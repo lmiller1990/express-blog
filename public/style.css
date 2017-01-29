@@ -1,0 +1,36 @@
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+.admin.panel {
+  text-align: right;
+}
+
+.container {
+  margin-left: 10%;
+  width: 80%;
+  white-space: normal;
+}
+
+.text-large {
+  font-size: 3em;
+}
+
+.text-medium {
+  font-size: 2em;
+}
+
+.inlined {
+  display: inline-block;
+}
+
+.centered {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.justified {
+  text-align: justify;
+}
+
+

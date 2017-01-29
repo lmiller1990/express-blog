@@ -18,10 +18,14 @@ router.use(function(req, res, next) {
   next();
 });
 
-router.get("/", function(req, res, next) {
-  res.render("index")
-});
-
 router.use("/", require("./users.js"))
+router.use("/posts", require("./posts.js"))
+
+router.get("/", function(req, res, next) {
+  if (res.locals.currentUser) {
+    console.log("Logged in as", res.locals.currentUser.username)
+  }
+  return res.redirect("/posts")
+});
 
 module.exports = router;

@@ -14,7 +14,6 @@ module.exports = () => {
         id: id
       }
     }).then((user) => { 
-      console.log(user, 'was deserialized')
       done(null, user) })
   })
 

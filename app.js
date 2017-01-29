@@ -7,7 +7,7 @@ var path = require("path");
 var session = require("express-session");
 
 var setUpPassport = require("./config/passportConfig.js");
-var routes = require("./routes.js");
+var routes = require("./routes/main.js");
 
 var app = express();
 setUpPassport();

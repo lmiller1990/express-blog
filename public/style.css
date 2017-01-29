@@ -24,9 +24,17 @@ body {
   display: inline-block;
 }
 
+.padded {
+  padding: 0.25em 0.25em 0.25em 0.25em
+}
+
 .centered {
   text-align: center;
   margin-bottom: 0.5em;
+}
+
+.right-floated {
+  float: right;
 }
 
 .justified {

@@ -6,6 +6,13 @@ body {
   text-align: right;
 }
 
+.centered {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
 .container {
   margin-left: 10%;
   width: 80%;
@@ -22,6 +29,10 @@ body {
 
 .inlined {
   display: inline-block;
+}
+
+.blocked {
+  display: block;
 }
 
 .padded {

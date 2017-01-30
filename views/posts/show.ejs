@@ -9,6 +9,9 @@
       <%= line %> <br />
     <% }) %>
   </div>
+  <% if (currentUser) { %>
+  <a class="right-floated" href='/posts/edit/<%= post.id %>'>Edit</a>
+  <% } %>
 </div>
 
 <% include ../_footer %>

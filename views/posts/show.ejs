@@ -4,10 +4,7 @@
   <div class="centered text-large">
     <%= post.title %>
   </div>
-  <div class="justified text-medium">
-    <% post.body.split("\n").forEach((line) => { %>
-      <%= line %> <br />
-    <% }) %>
+  <div class="justified text-medium"><%= post.body %>
   </div>
   <% if (currentUser) { %>
   <a class="right-floated" href='/posts/edit/<%= post.id %>'>Edit</a>

@@ -49,6 +49,7 @@ body {
 }
 
 .justified {
+  white-space: pre-wrap; 
   text-align: justify;
 }
 

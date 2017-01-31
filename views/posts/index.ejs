@@ -1,6 +1,5 @@
 <% include ../_header %>
 
-<div class="container">
   <% posts.forEach((post) => { %>
   <%= moment(post.createdAt).format('MMM YYYY') %>
   <a href="<%='posts/' + post.id %>">
@@ -11,7 +10,6 @@
   </p>
   <br />
   <% }) %>
-</div>
 
 <% include ../_footer %>
 

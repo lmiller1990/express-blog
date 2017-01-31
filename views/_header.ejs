@@ -2,34 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
+
     <link rel="stylesheet" type="text/css" href="/style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <title>Blog</title>
   </head>
   <body>
-    <div class="admin panel">
-      <% if (currentUser) { %>
-        Hello, <%= currentUser.username %>
-        <a href="/posts/new">New Post</a>
-        <a href="/logout">Log out</a>
-      <% } else { %>
-        <a href="/login">Log in</a>
-      <% } %>
-    </div>
+    <div class="ui stackable grid">
 
-    <h1>
-      Welcome to Lachlan's Blog
-    </h1>
+      <div class="two wide column">
+        <!-- placeholder -->
+      </div>
 
-    <h2>
-      <a href="/posts">Posts</a>
-      <a href="/about">About</a>
-      <a href="/resume">Resume</a>
-    </h2>
+      <div class="twelve wide column">
 
-    <% errors.forEach(function(error) { %>
-      <%= error %>
-    <% }) %>
+        <h1>
+          Welcome to Lachlan's Blog
+        </h1>
 
-    <% infos.forEach(function(info) { %>
-      <%= info %>
-    <% }) %>
+        <h4>
+          <a href="/posts">Posts</a> | 
+          <a href="/about">About</a> | 
+          <a href="/resume">Resume</a>
+        </h4>
+
+        <% errors.forEach(function(error) { %>
+        <%= error %>
+        <% }) %>
+
+        <% infos.forEach(function(info) { %>
+        <%= info %>
+        <% }) %>

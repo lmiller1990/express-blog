@@ -1,36 +1,30 @@
 body {
-  font-size: 100%;
-  font-family: "Courier New", monospace; 
+  font-size: 150%; !important;
+  font-family: "Courier New", monospace !important;
   line-height: 1.6875;
 }
-
+/*
 @media only screen and (max-width: 400px) {
-  body { font-size:90%; }
+  body { font-size:120%; }
 }
 
 @media only screen and (max-width: 800px) {
-  body { font-size:130%; }
+  body { font-size:160%; }
 } 
 
 @media only screen and (max-width: 1100px) {
-  body { font-size:160%; }
+  body { font-size:180%; }
 }
 
 @media only screen and (min-width: 1100px) {
-  body { font-size:170%; }
-  /*.wrap {max-width:770px;}*/
+  body { font-size:200%; }
 }
-
+*/
 h1, h2, h3, h4, h5 {
   text-align: center;
 }
 .admin.panel {
   text-align: right;
-}
-
-.container {
-  margin-left: 10%;
-  width: 80%;
 }
 
 .justified {

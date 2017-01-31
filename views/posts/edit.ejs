@@ -2,8 +2,8 @@
 
 <div class="container centered">
   <form action="/posts/update" method="post">
-    <input type="text" class="centered text-large full-width" name="title" value="<%= post.title %>" required><br />
-    <textarea type="text" rows="20" class="centered full-width justified text-medium" 
+    <input type="text" class="bottom-padded text-large full-width" name="title" value="<%= post.title %>" required><br />
+    <textarea type="text" rows="20" class="bottom-padded full-width justified text-medium" 
      name="body" required><%= post.body %>
     </textarea><br />
     <input type="hidden" name="id" value="<%= post.id %>">

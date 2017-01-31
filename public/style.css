@@ -9,16 +9,16 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-  body { font-size:100%; }
+  body { font-size:130%; }
 } 
 
 @media only screen and (max-width: 1100px) {
-  body { font-size:120%; }
+  body { font-size:160%; }
 }
 
 @media only screen and (min-width: 1100px) {
-  body { font-size:120%; }
-  .wrap {max-width:770px;}
+  body { font-size:170%; }
+  /*.wrap {max-width:770px;}*/
 }
 
 h1, h2, h3, h4, h5 {
@@ -36,4 +36,20 @@ h1, h2, h3, h4, h5 {
 .justified {
   white-space: pre-wrap; 
   text-align: justify;
+}
+
+.bottom-padded { 
+  margin-bottom: 1em;
+}
+
+.text-large {
+  font-size: 3em;
+}
+
+.text-medium {
+  font-size: 2em;
+}
+
+.full-width {
+  width: 100%;
 }

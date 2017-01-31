@@ -2,9 +2,9 @@
 
 <div class="container">
   <div class="centered text-large">
-    <%= post.title %>
+    <%= title %>
   </div>
-  <div class="justified text-medium"><%= post.body %>
+  <div class="justified text-medium"><%= content %>
   </div>
   <% if (currentUser) { %>
   <a class="right-floated" href='/posts/edit/<%= post.id %>'>Edit</a>

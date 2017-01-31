@@ -1,5 +1,4 @@
 body {
-/*  font-family: 'Avenir', Helvetica, Arial, sans-serif; */
    font-family: "Courier New", monospace; 
 }
 
@@ -17,7 +16,6 @@ body {
 .container {
   margin-left: 10%;
   width: 80%;
-  white-space: normal;
 }
 
 .text-large {
@@ -25,7 +23,7 @@ body {
 }
 
 .text-medium {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .inlined {

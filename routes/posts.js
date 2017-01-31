@@ -62,7 +62,8 @@ router.get("/:id", (req, res) => {
       id: parseInt(req.params.id)
     }
   }).then((post) => {
-    res.locals.post = post
+    res.locals.title = post.title
+    res.locals.content = post.body
     return res.render("posts/show")
   })
 })

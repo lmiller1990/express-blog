@@ -2,15 +2,14 @@
 
 <div class="container">
   <% posts.forEach((post) => { %>
-    <a class="inlined text-large" href="<%='posts/' + post.id %>">
-      <%= post.title %>
-    </a> 
-    <div class="right-floated inlined padded text-medium"> 
-      <%= moment(post.createdAt).format('MMM YYYY') %> 
-    </div>
-    <div class="text-medium">
-      <%= post.preview %>
-    </div><br />
+  <%= moment(post.createdAt).format('MMM YYYY') %>
+  <a href="<%='posts/' + post.id %>">
+    <%= post.title %>
+  </a> 
+  <p>
+    <%= post.preview %>
+  </p>
+  <br />
   <% }) %>
 </div>
 

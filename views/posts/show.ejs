@@ -1,10 +1,10 @@
 <% include ../_header %>
 
 <div class="container">
-  <div class="centered text-large">
+  <h3>
     <%= title %>
-  </div>
-  <div class="justified text-medium"><%= content %>
+  </h3>
+  <div class="justified"><%= content %>
   </div>
   <% if (currentUser) { %>
   <a class="right-floated" href='/posts/edit/<%= post.id %>'>Edit</a>

@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
       let firstLine = post.body.split(".")[0] + "."
       if (firstLine) post.preview = firstLine
     })
-    res.locals.posts = posts
+    res.locals.posts = posts.concat(posts)
     res.render("posts/index")
   })
 })

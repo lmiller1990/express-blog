@@ -28,4 +28,12 @@ router.get("/", function(req, res, next) {
   return res.redirect("/posts")
 });
 
+router.get("/about", (req, res) => {
+  return res.render("about") 
+})
+
+router.get("/resume", (req, res) => {
+  return res.render("resume") 
+})
+
 module.exports = router;

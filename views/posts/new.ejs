@@ -1,13 +1,11 @@
 <% include ../_header %>
 
-<div class="container centered">
   <h3>Create New Post</h3>
   <form action="/posts/create" method="post">
-    <input class="centered text-large full-width" type="text" name="title" placeholder="Post title" required><br />
-    <textarea class="centered full-width justified text-medium" rows="20" type="text" name="body" placeholder="Post body" required></textarea><br />
+    <input class="full-width" type="text" name="title" placeholder="Post title" required><br />
+    <textarea class="full-width justified" rows="20" type="text" name="body" placeholder="Post body" required></textarea><br />
     <input type="submit" class="right-floated" value="Create Post">
   <form>
-</div>
 
 <% include ../_footer %>
 

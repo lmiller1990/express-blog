@@ -1,7 +1,11 @@
 .container {
   font-size: 150%; 
   font-family: "Courier New", monospace !important;
-  line-height: 1.6875;
+  line-height: 1.3;
+}
+
+.indented.paragraph {
+  margin-left: 2em;
 }
 
 h1, h2, h3, h4, h5 {

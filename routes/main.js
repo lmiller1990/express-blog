@@ -20,6 +20,7 @@ router.use(function(req, res, next) {
 
 router.use("/", require("./users.js"))
 router.use("/posts", require("./posts.js"))
+router.use("/projects", require("./projects.js"))
 
 router.get("/", function(req, res, next) {
   if (res.locals.currentUser) {
@@ -34,6 +35,11 @@ router.get("/about", (req, res) => {
 
 router.get("/resume", (req, res) => {
   return res.render("resume") 
+})
+
+router.get("/projects", (req, res) => {
+  // return res.render("projects")
+  return res.render("projects/index")
 })
 
 module.exports = router;

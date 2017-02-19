@@ -1,16 +1,16 @@
 <% include ../_header %>
-
-  <% posts.forEach((post) => { %>
-  <%= moment(post.createdAt).format('MMM YYYY') %>
-  <a href="<%='posts/' + post.id %>">
-    <%= post.title %>
-  </a> 
-  <p>
-    <%= post.preview %>
-  </p>
-  <br />
-  <% }) %>
-
+  <div class="container">
+    <% posts.forEach((post) => { %>
+    <%= moment(post.createdAt).format('MMM YYYY') %>
+    <a href="<%='posts/' + post.id %>">
+      <%= post.title %>
+    </a> 
+    <p>
+      <%= post.preview %>
+    </p>
+    <br />
+    <% }) %>
+  </div>
 <% include ../_footer %>
 
 

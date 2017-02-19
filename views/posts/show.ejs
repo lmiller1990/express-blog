@@ -1,13 +1,14 @@
 <% include ../_header %>
 
-<h3>
-  <%= title %>
-</h3>
-<div class="justified"><%= content %>
+<div class="container">
+  <h3>
+    <%= title %>
+  </h3>
+  <div class="justified"><%= content %>
+  </div>
+  <% if (currentUser) { %>
+  <a class="right-floated" href='/posts/edit/<%= id %>'>Edit</a>
+  <% } %>
 </div>
-<% if (currentUser) { %>
-<a class="right-floated" href='/posts/edit/<%= id %>'>Edit</a>
-<% } %>
-
 <% include ../_footer %>
 

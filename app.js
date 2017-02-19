@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var bodyParser   = require("body-parser");
 var cookieParser = require("cookie-parser");
 const moment     = require("moment")

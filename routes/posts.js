@@ -10,11 +10,10 @@ router.get("/new", authenticate, (req, res) => {
 router.get("/", (req, res) => {
   Post.findAll().then((posts) => {
     posts.forEach((post) => {
-      console.log(post.body)
       let firstLine = post.body.split(".")[0] + "."
       if (firstLine) post.preview = firstLine
     })
-    res.locals.posts = posts
+    res.locals.posts = posts.reverse()
     res.render("posts/index")
   })
 })

@@ -68,4 +68,11 @@ router.get("/:id", (req, res) => {
   })
 })
 
+router.get("/all", (req, res) => {
+  Post.findAll().then((posts) => {
+    res.locals.posts = posts.reverse()
+    res.render("posts/index")
+  })
+})
+
 module.exports = router

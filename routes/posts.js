@@ -33,6 +33,13 @@ router.post("/update", authenticate, (req, res) => {
   })
 })
 
+router.get("/all", (req, res) => {
+  Post.findAll().then((posts) => {
+    res.locals.posts = posts.reverse()
+    return res.render("posts/all")
+  })
+})
+
 router.get("/edit/:id", authenticate, (req, res) => {
   Post.findOne({
     where: {
@@ -65,13 +72,6 @@ router.get("/:id", (req, res) => {
     res.locals.content = post.body
     res.locals.id = post.id
     return res.render("posts/show")
-  })
-})
-
-router.get("/all", (req, res) => {
-  Post.findAll().then((posts) => {
-    res.locals.posts = posts.reverse()
-    res.render("posts/index")
   })
 })
 

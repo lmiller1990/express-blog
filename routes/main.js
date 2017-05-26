@@ -29,6 +29,10 @@ router.get("/", function(req, res, next) {
   return res.redirect("/posts")
 });
 
+router.get("/tsukiattekudasai", (req, res) => {
+  return res.render("tsukiatte")
+})
+
 router.get("/about", (req, res) => {
   return res.render("about") 
 })

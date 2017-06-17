@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha 'test/**/*.spec.js'",
-    "start": "nodemon app.js"
+    "start": "cross-env NODE_ENV=production nodemon app.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

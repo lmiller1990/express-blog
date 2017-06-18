@@ -7,28 +7,21 @@
     <link rel="stylesheet" type="text/css" href="/tetris.css" />
  <meta name="viewport" content="width=device-width, maximum-scale=1, user    -scalable=no" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" />
-    <!--    <meta name="viewport" content="width=device-width, initial-scale=1" >-->
+ <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" />-->
     <title>Blog</title>
   </head>
   <body>
-    <div class="ui stackable grid">
-
-      <div class="two wide column">
-        <!-- placeholder -->
+    <div class="flex-grid-thirds">
+      <div class="col gutter">
+        <!-- Left gutter -->
       </div>
 
-      <div class="twelve wide column">
-
-        <h1>
-          Welcome to Lachlan's Blog
-        </h1>
-
+      <div class="col main">
         <h4>
-          <a href="/posts">Posts</a> | 
-          <a href="/projects">Projects</a> | 
-          <a href="/about">About</a> | 
-          <a href="/resume">Resume</a>
+          <a class="menu link" href="/posts">Posts</a> 
+          <a class="menu link" href="/projects">Projects</a> 
+          <a class="menu link" href="/about">About</a>  
+          <a class="menu link" href="/resume">Resume</a>
         </h4>
 
         <% errors.forEach(function(error) { %>
@@ -38,5 +31,3 @@
         <% infos.forEach(function(info) { %>
         <%= info %>
         <% }) %>
-
-        <!--<div class="container">-->

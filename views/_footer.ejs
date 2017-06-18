@@ -1,19 +1,16 @@
-<!--</div>-->
-<div class="right-floated">
-  <% if (currentUser) { %>
-  Hello, <%= currentUser.username %>
-  <a href="/posts/new">New Post</a>
-  <a href="/logout">Log out</a>
-  <% } else { %>
-  <a href="/login">Log in</a>
-  <% } %>
-</div>
-
-</div>
-
-<div class="two wide column">
-  <!-- placeholder -->
-</div>
-</div>
+      <div class="right-floated">
+        <% if (currentUser) { %>
+        Hello, <%= currentUser.username %>
+        <a href="/posts/new">New Post</a>
+        <a href="/logout">Log out</a>
+        <% } else { %>
+        <a href="/login">Log in</a>
+        <% } %>
+      </div>
+    </div>
+    <div class="col gutter">
+      <!-- Right gutter -->
+    </div>
+  </div>
 </body>
 </html>

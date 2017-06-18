@@ -1,3 +1,30 @@
+textarea, input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col.gutter {
+  flex-basis: 20em;
+}
+
+.col.main {
+  flex-basis: 100%;
+}
+
+@media (max-width: 414px) {
+  .flex-grid-thirds {
+    display: block;
+    .col {
+      width: 100% !important;
+    }
+  }
+}
+
 .container {
   font-size: 150%; 
   font-family: "Courier New", monospace !important;
@@ -11,6 +38,25 @@
 h1, h2, h3, h4, h5 {
   text-align: center;
   font-family: "Courier New", monospace !important;
+  text-transform: uppercase;
+  font-weight: 500 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+.menu.link {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.menu.link:visited {
+  color: grey;
 }
 
 .justified {
@@ -30,3 +76,12 @@ h1, h2, h3, h4, h5 {
 .full-width {
   width: 100%;
 }
+
+.update.post.button {
+  background: none;
+  border: none; 
+  font-size: 0.75em !important;
+  text-decoration: underline;
+}
+
+.update.post.button:hover { cursor: pointer; }

@@ -13,14 +13,14 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "pproduction": {
+  "production": {
     "username": "root",
     "password": "Southbank1",
     "database": "blog_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "production": {
+  "pproduction": {
     "username": "sql12180666",
     "password": "pjvAx25adK",
     "database": "sql12180666",

@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Southbank1",
+    "database": "blog_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+
+  },
+  "test": {
+    "username": "root",
+    "password": "Southbank1",
+    "database": "express_blog_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+
+  },
+  "local": {
+    "username": "root",
+    "password": "Southbank1",
+    "database": "blog_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+
+  },
+  "production": {
+    "username": "sql12180666",
+    "password": "pjvAx25adK",
+    "database": "sql12180666",
+    "host": "sql12.freemysqlhosting.net",
+    "dialect": "mysql"
+  }
+}

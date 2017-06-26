@@ -3,7 +3,11 @@ textarea, input {
   font-size: inherit;
 }
 
-.flex-grid-thirds {
+.col.main {
+  max-width: 50em;
+  margin: 0 auto;
+}
+/*.flex-grid-thirds {
   display: flex;
   justify-content: space-around;
 }
@@ -23,7 +27,7 @@ textarea, input {
       width: 100% !important;
     }
   }
-}
+}*/
 
 .container {
   font-size: 150%; 
@@ -62,7 +66,7 @@ a:visited {
 .justified {
   white-space: pre-wrap; 
   word-wrap: break-word;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .bottom-padded { 
